@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120vh;
+      background-color: white;
+    }
+    .container {
+      background-color: black;
+      display: grid;
+      height: 748px;
+      grid-template-rows: 414px 325px;
+      grid-template-columns: 320px 419px;
+      gap: 9px;
+    }
+
+    .red {
+      background-color: #E72F24;
+    }
+
+    .top {
+      background-color: #F0F1EC;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      background-color: black;
+    }
+    
+    .big.white {
+      flex-basis: 296px;
+    }
+
+    .tiny {
+      flex-basis: 20px;
+    }
+
+    .bottom {
+      background-color: black;
+      display: flex;
+      gap: 9px;
+    }
+    .bottom > div {
+      background-color: black;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    .big-bottom {
+      flex-basis: 360px;
+      display: grid;
+      grid-template-rows: 296px 20px;
+      grid-template-columns: 198px 153px;
+      gap: 9px;
+    }
+    .white {
+      background-color: #F0F1EC;
+      grid-column: span 2;
+    }
+    .black {
+      background-color: #232629;
+    }
+    .yellow {
+      background-color: #F9D01E;
+    }
+    .small {
+      flex-basis: 50px;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .small > div {
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    .blue {
+      flex-basis: 130px;
+      background-color: #004592;
+    }
+    .long {
+      flex-basis: 180px;
+      background-color: #F0F1EC;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+<div class="main">
+  <div class="container">
+    <div class="red"></div>
+    <div class="top"></div>
+    <div class="left">
+      <div class="big white"></div>
+      <div class="tiny white"></div>
+    </div>
+    <div class="bottom">
+      <div class="big-bottom">
+        <div class="white"></div>
+        <div class="yellow"></div>
+        <div class="black"></div>
+      </div>
+      <div class="small">
+        <div class="blue"></div>
+        <div class="long white"></div>
+      </div>
+    </div>
+   </div>
+
+</div>
+</body>
+
+</html>

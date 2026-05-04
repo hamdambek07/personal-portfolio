@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog - Hamdambek</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./blog.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-inner container">
+                <span class="brand">Hamdambek</span>
+                <div class="nav-links">
+                    <a href="./index.html#hero">Home</a>
+                    <a href="./index.html#projects">Projects</a>
+                    <a href="./index.html#about">About</a>
+                    <a href="./blog.html">Blog</a>
+                    <a href="./index.html#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <section id="blog">
+            <h2>My Blog</h2>
+            <p>Sharing my thoughts and experiences on web development and technology.</p>
+            <div class="blog-container">
+                <div class="blog-posts" id="blog-list">
+                    <article class="blog-post">
+                        <img src="./assets/arch.png" alt="The Hardest OS to Install? The Myth and Reality of Arch Linux">
+                        <div class="post-content">
+                            <h3>The Hardest OS to Install? The Myth and Reality of Arch Linux</h3>
+                            <p class="post-date">May 1, 2025</p>
+                            <p>In the world of operating systems, there is a legendary "final boss": Arch Linux. For many IT professionals, successfully installing Arch is a rite of passage, often viewed as the bridge between being a "user" and a "power user."</p>
+                            <a href="#" onclick="event.preventDefault(); showArticle(1);" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        <img src="./assets/intel.png" alt="The Integrated Revolution: How the Intel Arc B390 Changed the iGPU Game">
+                        <div class="post-content">
+                            <h3>The Integrated Revolution: How the Intel Arc B390 Changed the iGPU Game</h3>
+                            <p class="post-date">April 28, 2025</p>
+                            <p>For decades, "Integrated Graphics" (iGPU) was a polite way of saying "this laptop can't play games." If you wanted to do video editing or gaming, you needed a bulky, expensive dedicated graphics card.</p>
+                            <a href="#" onclick="event.preventDefault(); showArticle(2);" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        <img src="./assets/expedition33.jpg" alt="The 2025 Industry Sweep: Why 'Clair Obscur: Expedition 33' Won Everything">
+                        <div class="post-content">
+                            <h3>The 2025 Industry Sweep: Why "Clair Obscur: Expedition 33" Won Everything</h3>
+                            <p class="post-date">April 25, 2025</p>
+                            <p>By the end of 2025, one name dominated every awards ceremony from The Game Awards to the BAFTAs: Clair Obscur: Expedition 33. Developed by the French studio Sandfall Interactive, it didn't just win; it set a world record.</p>
+                            <a href="#" onclick="event.preventDefault(); showArticle(3);" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        <img src="./assets/snapdragon.png" alt="Snapdragon X2: The Future of Windows Laptops">
+                        <div class="post-content">
+                            <h3>Snapdragon X2: The Future of Windows Laptops</h3>
+                            <p class="post-date">April 22, 2025</p>
+                            <p>The Snapdragon X2 series represents a pivotal moment in the PC industry. For years, Windows laptops were defined by Intel and AMD, while Apple's M-series set the standard. With the X2, Qualcomm is rewriting the rules.</p>
+                            <a href="#" onclick="event.preventDefault(); showArticle(4);" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+                <div id="article-view" style="display: none;">
+                    <!-- Full article will be rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer">
+                <p><a href="https://t.me/hamdambek_arolov">Telegram</a> if you use this messenger</p>
+                <p><a href="https://github.com/hamdambek07">GitHub</a> portfolio</p>
+            </div>
+            <p>© 2025 Hamdambek Arolov. All rights reserved.</p>
+        </footer>
+
+        <script>
+            // Article data
+            const articles = [
+                {
+                    id: 1,
+                    title: "The Hardest OS to Install? The Myth and Reality of Arch Linux",
+                    date: "May 1, 2025",
+                    image: "./assets/arch.png",
+                    excerpt: "In the world of operating systems, there is a legendary 'final boss': Arch Linux...",
+                    content: `<p>In the world of operating systems, there is a legendary "final boss": Arch Linux. For many IT professionals, successfully installing Arch is a rite of passage, often viewed as the bridge between being a "user" and a "power user." But why does it have this reputation?</p>
+                    
+                    <h4>What is Arch Linux?</h4>
+                    <p>Unlike Windows or macOS, which come as finished products with friendly setup wizards, Arch Linux follows a philosophy called "KISS" (Keep It Simple, Stupid). In the Arch world, "simple" doesn't mean "easy for the user"—it means the internal code is lean and unburdened by bloat. When you download Arch, you don't get a desktop; you get a blinking cursor and a command line.</p>
+                    
+                    <h4>Why it's the "Hardest"</h4>
+                    <p>For a general IT audience, the difficulty lies in the lack of a Graphical User Interface (GUI) during setup. To install it, you must:</p>
+                    <ul>
+                        <li><strong>Manual Partitioning:</strong> You use commands to manually slice your hard drive into sections.</li>
+                        <li><strong>Network via Command Line:</strong> You have to manually configure your Wi-Fi or Ethernet drivers using text commands.</li>
+                        <li><strong>The "Chroot":</strong> You essentially "teleport" into your new, empty system to build it from the inside out, installing the kernel, the bootloader, and the drivers yourself.</li>
+                    </ul>
+                    
+                    <h4>The Modern Shift: archinstall</h4>
+                    <p>Recently, Arch introduced archinstall, a built-in script that automates these steps. While this makes it significantly easier, the "true" Arch experience remains a manual labor of love. It's not just an OS; it's an education in how a computer actually works.</p>`
+                },
+                {
+                    id: 2,
+                    title: "The Integrated Revolution: How the Intel Arc B390 Changed the iGPU Game",
+                    date: "April 28, 2025",
+                    image: "./assets/intel.png",
+                    excerpt: "For decades, 'Integrated Graphics' (iGPU) was a polite way of saying 'this laptop can't play games'...",
+                    content: `<p>For decades, "Integrated Graphics" (iGPU) was a polite way of saying "this laptop can't play games." If you wanted to do video editing or gaming, you needed a bulky, expensive dedicated graphics card (dGPU). That changed with the launch of the Intel Arc B390 (part of the Panther Lake architecture).</p>
+                    
+                    <h4>Breaking the 50W Barrier</h4>
+                    <p>The Arc B390 is built on Intel's new Xe3 architecture. For the general IT professional, the key takeaway is efficiency. Traditional high-end laptops require massive chargers because a dedicated GPU can pull 100W of power or more. The B390 delivers comparable performance while barely crossing the 50W mark.</p>
+                    
+                    <h4>Key Specs for the IT Crowd</h4>
+                    <ul>
+                        <li><strong>1080p AAA Gaming:</strong> The B390 is the first iGPU to comfortably run titles like Cyberpunk 2077 at 80+ FPS on High settings (using XeSS upscaling).</li>
+                        <li><strong>AI Powered:</strong> It features a massive NPU boost, contributing to over 120 TOPS of AI performance, which helps with everything from background noise cancellation to real-time video upscaling.</li>
+                        <li><strong>AV1 Encoding:</strong> It includes native hardware support for AV1, the future standard of video streaming, making it a "creator's best friend" in a thin-and-light laptop.</li>
+                    </ul>
+                    
+                    <p>By outperforming many entry-level dedicated cards from NVIDIA, the B390 has effectively killed the "budget gaming laptop" category, replacing it with sleek, all-day-battery machines.</p>`
+                },
+                {
+                    id: 3,
+                    title: "The 2025 Industry Sweep: Why 'Clair Obscur: Expedition 33' Won Everything",
+                    date: "April 25, 2025",
+                    image: "./assets/expedition33.jpg",
+                    excerpt: "By the end of 2025, one name dominated every awards ceremony from The Game Awards to the BAFTAs...",
+                    content: `<p>By the end of 2025, one name dominated every awards ceremony from The Game Awards to the BAFTAs: Clair Obscur: Expedition 33. Developed by the French studio Sandfall Interactive, it didn't just win; it set a world record for the most "Game of the Year" (GOTY) awards in history, surpassing even Elden Ring.</p>
+                    
+                    <h4>What is the "Expedition 33" Phenomenon?</h4>
+                    <p>The game is a turn-based RPG with a unique twist: real-time "reactive" combat. While you select your moves from a menu, you must also dodge and parry in real-time. For an IT audience, the technical execution is what's most impressive.</p>
+                    
+                    <h4>Why it Won 430+ Awards</h4>
+                    <ul>
+                        <li><strong>Visual Fidelity:</strong> Built on Unreal Engine 5, it pushed the boundaries of lighting and "Belle Époque" art style, proving that indie-sized teams can now deliver "Triple-A" visual quality.</li>
+                        <li><strong>Innovation in Tradition:</strong> It revitalized a "dead" genre (turn-based combat) by adding technical skill-based mechanics, proving that players still crave deep, tactical systems if they feel modern.</li>
+                        <li><strong>Performance Excellence:</strong> Jennifer English (known for Baldur’s Gate 3) took home numerous "Best Performer" awards for her role as Maelle, grounding the fantastical tech in human emotion.</li>
+                    </ul>
+                    
+                    <p>Expedition 33 serves as a case study for the modern gaming industry: it shows that a focused vision, technical polish, and respect for player intelligence will win over the world every time.</p>`
+                },
+                {
+                    id: 4,
+                    title: "Snapdragon X2: The Future of Windows Laptops",
+                    date: "April 22, 2025",
+                    image: "./assets/snapdragon.png",
+                    excerpt: "The Snapdragon X2 series represents a pivotal moment in the PC industry...",
+                    content: `<p>The Snapdragon X2 series represents a pivotal moment in the PC industry. For years, Windows laptops were defined by Intel and AMD, while Apple's "M-series" silicon set the gold standard for battery life and cool, quiet performance. With the X2 series, Qualcomm isn't just catching up; they are effectively rewriting the rules for what a Windows laptop can do. Here is a breakdown of what makes these new processors significant for the modern IT professional and general user alike.</p>
+                    
+                    <h4>The Shift to "Arm" Architecture</h4>
+                    <p>To understand the X2, you first have to understand the "Arm" architecture. Most traditional PCs use x86 architecture (Intel/AMD). These are powerful but "power-hungry," often requiring large fans and heavy batteries.</p>
+                    <p>The Snapdragon X2 uses Arm architecture, the same fundamental tech found in smartphones and MacBooks. This allows for:</p>
+                    <ul>
+                        <li><strong>Multi-day battery life:</strong> We are finally seeing Windows laptops that can truly last 20+ hours on a single charge.</li>
+                        <li><strong>Instant-on:</strong> Waking up your laptop feels as fast as waking up your phone.</li>
+                        <li><strong>Always Connected:</strong> Most X2 devices come with integrated 5G/LTE options, making "hunting for Wi-Fi" a thing of the past.</li>
+                    </ul>
+                    
+                    <h4>A Three-Tiered Family</h4>
+                    <p>Qualcomm has structured the X2 lineup into three distinct tiers to match different budget and performance needs:</p>
+                    <ul>
+                        <li><strong>Snapdragon X2 Elite Extreme</strong>: The powerhouse. Built with up to 18 cores, this is designed for "pro" users—developers, data analysts, and video editors who need desktop-class power in a thin chassis.</li>
+                        <li><strong>Snapdragon X2 Elite</strong>: The "premium" standard. It balances high-end performance with extreme efficiency, perfect for the typical corporate power user.</li>
+                        <li><strong>Snapdragon X2 Plus</strong>: The mainstream choice. Available in 6-core and 10-core versions, it is designed for everyday productivity (Office 365, web apps, and streaming) at a more accessible price point.</li>
+                    </ul>
+                    
+                    <h4>The AI Engine: 80 TOPS</h4>
+                    <p>The standout metric for the X2 series is 80 TOPS (Trillion Operations Per Second). This is the "speed limit" of the NPU (Neural Processing Unit)—a dedicated part of the chip designed specifically for AI.</p>
+                    <p>For context, the previous generation had 45 TOPS. This doubling of power means that AI tasks—like blurring your background in a Teams call, real-time language translation, or running local AI assistants (Copilot+)—happen instantly on your device without sending your data to the cloud or draining your battery.</p>
+                    
+                    <h4>Performance vs. The Competition</h4>
+                    <p>In early testing, the Snapdragon X2 series holds its own against the industry's best:</p>
+                    <ul>
+                        <li><strong>Vs. Intel/AMD:</strong> The X2 often delivers significantly better "performance per watt." This means it can do the same amount of work while using about 40% less power than a traditional x86 chip.</li>
+                        <li><strong>Vs. Apple:</strong> The high-end X2 Elite Extreme trades blows with Apple's M4 series in multi-core tasks, though Apple still holds a slight lead in pure single-core speed.</li>
+                    </ul>
+                    
+                    <h4>The "App Compatibility" Question</h4>
+                    <p>The biggest hurdle for Arm-based Windows in the past was software compatibility. Because the architecture is different, old apps had to be "emulated" (translated on the fly), which made them slow.</p>
+                    <p>Today, that issue has largely vanished. Most major software—Chrome, Office, Zoom, Adobe Creative Cloud—now runs "natively" on Snapdragon. For everything else, the built-in translation layer (called Prism) is now so efficient that most users won't even notice they aren't using a traditional Intel chip.</p>
+                    
+                    <h4>Final Verdict</h4>
+                    <p>The Snapdragon X2 series marks the end of the "hot and heavy" Windows laptop era. If your work requires mobility, constant connectivity, and the ability to work all day without a charger, the X2 series is likely the hardware platform you've been waiting for.</p>`
+                }
+            ];
+
+            // Show full article
+            function showArticle(id) {
+                const article = articles.find(a => a.id === id);
+                if (!article) return;
+
+                const blogList = document.getElementById('blog-list');
+                const articleView = document.getElementById('article-view');
+
+                articleView.innerHTML = `
+                    <div class="article-full">
+                        <button class="back-button" onclick="showBlogList()">← Back to Blog</button>
+                        <article class="blog-post-full">
+                            <img src="${article.image}" alt="${article.title}" class="article-image">
+                            <h1>${article.title}</h1>
+                            <p class="post-date">${article.date}</p>
+                            <div class="article-body">
+                                ${article.content}
+                            </div>
+                        </article>
+                    </div>
+                `;
+
+                blogList.style.display = 'none';
+                articleView.style.display = 'block';
+                window.scrollTo(0, 0);
+            }
+
+            // Return to blog list
+            function showBlogList() {
+                const blogList = document.getElementById('blog-list');
+                const articleView = document.getElementById('article-view');
+
+                blogList.style.display = 'grid';
+                articleView.style.display = 'none';
+                window.scrollTo(0, 0);
+            }
+        </script>
+    </body>
+</html>

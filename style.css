@@ -1,0 +1,323 @@
+html {
+    color-scheme: dark;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.navbar {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nav-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 18px 24px;
+    gap: 32px;
+}
+.navbar .brand {
+    font-family: "Sigmar", serif;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.nav-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Patrick Hand", serif;
+    font-size: 1rem;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+.container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+}
+.container > * {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.container > img {
+    margin-top: 15px;
+    width: 150px;
+    border-radius: 50%;
+}
+h1 {
+    color: beige;
+    font-size: 2rem;
+    font-family: "Sigmar", serif;
+    font-weight: 400;
+}
+.container > h2 {
+    color: beige;
+    font-size: 1.3rem;
+    font-family: "Sigmar", serif;
+    font-weight: 400;
+}
+#hero {
+    width: 100%;
+    background-image: url("./assets/workspace.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    font-family: "Patrick Hand", serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    font-family: "Comic Neue", serif;
+}
+
+h3 {
+    font-family: "Patrick Hand", serif;
+    font-weight: 500;
+}
+
+#resume {
+    padding: 24px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.check {
+    text-align: center;
+}
+
+.pro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#projects {
+    padding: 24px 40px;
+    scroll-margin-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.projects img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.projects p {
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+#projects p {
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    padding: 0 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#about > h3 {
+    text-align: center;
+    width: 100%;
+}
+
+.about > div {
+    flex: 1 1 380px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+}
+
+.about p {
+    margin-top: 0;
+}
+.about img {
+    width: 150px;
+    height: auto;
+    margin: 0;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+.about > div h4 {
+    font-family: "Patrick Hand", serif;
+    margin-top: 5px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#contact {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact p {
+    text-align: center;
+}
+
+button {
+    height: 75px;
+    width: 150px;
+    background-color: blue;
+    border-style: none;
+    border-radius: 30px;
+    font-family: "Patrick Hand", serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Comic Neue", serif;
+    clear: both;
+}
+
+@media (max-width: 800px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    .about > div {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 960px) {
+    .nav-inner {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 16px 18px;
+        gap: 16px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-inner {
+        justify-content: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #hero,
+    #resume,
+    #projects,
+    #about,
+    #contact,
+    #footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .projects {
+        gap: 14px;
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .about > div {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    button {
+        width: 180px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
